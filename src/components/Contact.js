@@ -662,12 +662,13 @@ const Contact = () => {
                   title: "Visit Our Shop",
                   details: [
                     <strong className="dark-bold">Nairobi, Kenya</strong>,
-                    <strong className="dark-bold">Utawala, behind Brimark Hotel along Mofarm Road</strong>
+                    <strong className="dark-bold">Utawala, behind Brimark Hotel</strong>,
+                    <strong className="dark-bold">along Mofarm Road</strong>
                   ]
                 },
                 {
                   icon: <FaPhone />,
-                  title: "Call Us Now",
+                  title: "Call Us Now", 
                   details: [
                     <strong className="dark-bold">0713 970 395</strong>,
                     <strong className="dark-bold">0784 168 710</strong>,
@@ -678,7 +679,8 @@ const Contact = () => {
                   icon: <FaClock />,
                   title: "Business Hours",
                   details: [
-                    <strong className="dark-bold">Monday - Saturday: 8:00 AM - 9:00 PM</strong>,
+                    <strong className="dark-bold">Monday - Saturday</strong>,
+                    <strong className="dark-bold">8:00 AM - 9:00 PM</strong>,
                     <strong className="dark-bold">Sunday: 1:00 PM - 8:00 PM</strong>
                   ]
                 },
@@ -687,7 +689,7 @@ const Contact = () => {
                   title: "Email Us",
                   details: [
                     <strong className="dark-bold">steavkyende@gmail.com</strong>,
-                    <em className="dark-italic">We'll reply within 2 hours</em>
+                    <em className="dark-italic">We reply within 2 hours</em>
                   ]
                 }
               ].map((item, index) => (
@@ -695,54 +697,59 @@ const Contact = () => {
                   key={index}
                   style={{ 
                     display: 'flex', 
-                    alignItems: 'flex-start', 
+                    alignItems: 'flex-start',
                     marginBottom: '20px',
-                    padding: '20px',
+                    padding: '25px 20px',
                     backgroundColor: 'white',
-                    borderRadius: '10px',
-                    boxShadow: '0 2px 10px rgba(220, 38, 38, 0.1)',
-                    border: '1px solid #fecaca'
+                    borderRadius: '12px',
+                    boxShadow: '0 4px 12px rgba(220, 38, 38, 0.1)',
+                    border: '2px solid #fecaca',
+                    minHeight: '120px'
                   }}
                 >
                   <div style={{ 
                     color: '#dc2626', 
-                    fontSize: 'clamp(1.2rem, 3vw, 1.5rem)', 
-                    marginRight: '15px', 
+                    fontSize: '1.5rem', 
+                    marginRight: '20px', 
                     marginTop: '2px',
-                    minWidth: '24px'
+                    minWidth: '30px',
+                    textAlign: 'center'
                   }}>
                     {item.icon}
                   </div>
-                  <div>
+                  <div style={{ flex: 1 }}>
                     <strong style={{ 
                       display: 'block', 
                       color: '#dc2626', 
-                      fontSize: 'clamp(1rem, 2.5vw, 1.1rem)',
-                      marginBottom: '5px'
+                      fontSize: '1.2rem',
+                      marginBottom: '12px',
+                      fontWeight: '700'
                     }}>
                       {item.title}
                     </strong>
-                    {item.details.map((detail, i) => (
-                      <span 
-                        key={i}
-                        style={{ 
-                          color: '#666', 
-                          display: 'block',
-                          fontSize: 'clamp(0.9rem, 2vw, 1rem)'
-                        }}
-                      >
-                        {detail}
-                      </span>
-                    ))}
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                      {item.details.map((detail, i) => (
+                        <div 
+                          key={i}
+                          style={{ 
+                            color: '#374151',
+                            fontSize: '1rem',
+                            lineHeight: '1.4'
+                          }}
+                        >
+                          {detail}
+                        </div>
+                      ))}
+                    </div>
                     {item.title === "Business Hours" && (
                       <div style={{ 
                         display: 'flex', 
                         alignItems: 'center', 
                         gap: '8px', 
-                        marginTop: '10px',
+                        marginTop: '12px',
                         padding: '8px 12px',
                         backgroundColor: '#fef2f2',
-                        borderRadius: '5px',
+                        borderRadius: '6px',
                         border: '1px solid #fecaca'
                       }}>
                         <span style={{
@@ -753,7 +760,7 @@ const Contact = () => {
                         }}></span>
                         <strong style={{ 
                           color: isCurrentlyOpen() ? '#16a34a' : '#dc2626',
-                          fontSize: 'clamp(0.9rem, 2vw, 1rem)'
+                          fontSize: '0.9rem'
                         }}>
                           {isCurrentlyOpen() ? "We're Open Now!" : "We're Currently Closed"}
                         </strong>
@@ -825,7 +832,7 @@ const Contact = () => {
             borderRadius: '15px',
             boxShadow: '0 5px 20px rgba(220, 38, 38, 0.1)',
             height: 'fit-content',
-            border: '1px solid #fecaca'
+            border: '2px solid #fecaca'
           }}>
             <h3 style={{ 
               color: '#dc2626', 
