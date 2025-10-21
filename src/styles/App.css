@@ -3150,7 +3150,7 @@ html {
 }
 
 /* ===== DARK MODE SUPPORT ===== */
-@media (prefers-color-scheme: dark) and (max-width: 768px) {
+/* @media (prefers-color-scheme: dark) and (max-width: 768px) {
   .hero {
     background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
   }
@@ -3161,7 +3161,7 @@ html {
     background: rgba(255, 255, 255, 0.05);
     border-color: rgba(255, 255, 255, 0.1);
   }
-}
+} */
 
 /* ===== SMOOTH SCROLLING ===== */
 html {
