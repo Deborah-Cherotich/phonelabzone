@@ -5128,8 +5128,8 @@ main {
 /* logo size inspected */
 @media (max-width: 480px) {
   .logo {
-    height: 200px !important;
-    max-width: 320px !important;
+    height: 180px !important;
+    max-width: 300px !important;
   }
 }
 
