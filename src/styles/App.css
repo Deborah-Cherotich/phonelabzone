@@ -5116,4 +5116,30 @@ main {
   }
 }
 
+/* ENLARGE MOBILE LOGO - ADD THIS AT THE END OF YOUR CSS */
+@media (max-width: 768px) {
+  .logo {
+    height: 100px !important;
+    max-width: 230px !important;
+    width: auto !important;
+  }
+}
 
+/* logo size inspected */
+@media (max-width: 480px) {
+  .logo {
+    height: 120px !important;
+    max-width: 320px !important;
+  }
+}
+
+.dark-bold {
+  color: #1a202c !important; /* Very dark gray/near black */
+  font-weight: 700 !important;
+}
+
+.dark-italic {
+  color: #2d3748 !important; /* Dark gray */
+  font-style: italic !important;
+  font-weight: 500 !important;
+}
