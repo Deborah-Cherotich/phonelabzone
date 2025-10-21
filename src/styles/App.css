@@ -3707,3 +3707,303 @@ html {
     box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
   }
 }
+
+
+
+
+/* ===== CUTE WEBSITE MAKEOVER ===== */
+
+/* Remove dark backgrounds and make everything light and cute */
+body {
+  background: #fff !important;
+  font-family: 'Inter', 'Segoe UI', 'SF Pro Display', -apple-system, sans-serif !important;
+}
+
+/* ===== CUTE HEADER FIX ===== */
+.header {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(229, 62, 62, 0.1) !important;
+  box-shadow: 0 2px 30px rgba(0,0,0,0.08) !important;
+}
+
+@media (max-width: 768px) {
+  .header .container {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 1rem 20px !important;
+    min-height: 80px !important;
+  }
+
+  /* Logo - Left side, properly sized */
+  .logo-section {
+    flex: 0 0 auto !important;
+  }
+
+  .logo {
+    height: 60px !important;
+    width: auto !important;
+    max-width: 180px !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+  }
+
+  /* Menu toggle - Right side */
+  .header-actions {
+    flex: 0 0 auto !important;
+  }
+
+  .menu-toggle {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 12px !important;
+    background: linear-gradient(135deg, #E53E3E, #F56565) !important;
+    color: white !important;
+    border: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1.4rem !important;
+    box-shadow: 0 4px 15px rgba(229, 62, 62, 0.3) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+
+  .menu-toggle:hover {
+    transform: scale(1.1) !important;
+    box-shadow: 0 6px 20px rgba(229, 62, 62, 0.4) !important;
+  }
+
+  /* Navigation menu */
+  .nav {
+    position: fixed !important;
+    top: 80px !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(30px) !important;
+    flex-direction: column !important;
+    padding: 2rem !important;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15) !important;
+    transform: translateY(-100%) !important;
+    opacity: 0 !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    border-radius: 0 0 25px 25px !important;
+    border: 1px solid rgba(229, 62, 62, 0.1) !important;
+    gap: 0.8rem !important;
+    z-index: 1000 !important;
+  }
+
+  .nav-open {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+  }
+
+  .nav a {
+    padding: 1.2rem 1.5rem !important;
+    border-radius: 14px !important;
+    text-align: center !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    border: 2px solid rgba(229, 62, 62, 0.1) !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    color: #333 !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .nav a:hover {
+    background: linear-gradient(135deg, #E53E3E, #F56565) !important;
+    color: white !important;
+    transform: translateX(10px) !important;
+    border-color: transparent !important;
+  }
+}
+
+/* ===== CUTE HERO SECTION ===== */
+.hero {
+  background: linear-gradient(135deg, #fff5f5 0%, #fef7ff 50%, #f0f9ff 100%) !important;
+  padding: 120px 0 80px !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* Remove dark overlays */
+.hero::before,
+.hero::after {
+  display: none !important;
+}
+
+/* Cute floating elements */
+.cute-floating {
+  position: absolute;
+  animation: floatCute 6s ease-in-out infinite;
+}
+
+@keyframes floatCute {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+/* ===== CUTE CARDS & SECTIONS ===== */
+.service-card,
+.product-card,
+.testimonial-card,
+.process-step {
+  background: white !important;
+  border-radius: 20px !important;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08) !important;
+  border: 1px solid rgba(229, 62, 62, 0.1) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.service-card:hover,
+.product-card:hover,
+.testimonial-card:hover,
+.process-step:hover {
+  transform: translateY(-10px) scale(1.02) !important;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+  border-color: rgba(229, 62, 62, 0.3) !important;
+}
+
+/* ===== CUTE BUTTONS ===== */
+.btn,
+.cta-btn,
+.service-btn,
+.product-btn,
+.submit-btn {
+  background: linear-gradient(135deg, #E53E3E, #F56565) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 14px !important;
+  padding: 1.2rem 2.5rem !important;
+  font-weight: 600 !important;
+  font-size: 1.1rem !important;
+  box-shadow: 0 6px 20px rgba(229, 62, 62, 0.3) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.8rem !important;
+}
+
+.btn:hover,
+.cta-btn:hover,
+.service-btn:hover,
+.product-btn:hover,
+.submit-btn:hover {
+  transform: translateY(-3px) scale(1.05) !important;
+  box-shadow: 0 10px 30px rgba(229, 62, 62, 0.4) !important;
+}
+
+/* ===== CUTE CONTACT FORM ===== */
+.contact {
+  background: linear-gradient(135deg, #fff5f5 0%, #f0f9ff 100%) !important;
+}
+
+.contact-form {
+  background: white !important;
+  border-radius: 25px !important;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1) !important;
+  border: 1px solid rgba(229, 62, 62, 0.1) !important;
+}
+
+/* ===== REMOVE ALL DARK BACKGROUNDS ===== */
+.process,
+.services,
+.products,
+.testimonials,
+.contact {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%) !important;
+}
+
+.cta-section {
+  background: linear-gradient(135deg, #E53E3E, #F56565) !important;
+}
+
+/* ===== CUTE FOOTER ===== */
+.footer {
+  background: linear-gradient(135deg, #2D3748, #4A5568) !important;
+}
+
+/* ===== CUTE SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #E53E3E, #F56565);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #F56565, #E53E3E);
+}
+
+/* ===== CUTE LOADING ANIMATIONS ===== */
+@keyframes cuteBounce {
+  0%, 20%, 60%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  80% {
+    transform: translateY(-5px);
+  }
+}
+
+.cute-bounce:hover {
+  animation: cuteBounce 0.6s ease;
+}
+
+/* ===== CUTE SHADOWS ===== */
+.cute-shadow {
+  box-shadow: 
+    0 4px 8px rgba(0,0,0,0.05),
+    0 8px 16px rgba(0,0,0,0.05),
+    0 16px 32px rgba(0,0,0,0.05) !important;
+}
+
+/* ===== MOBILE OPTIMIZATIONS ===== */
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 0 60px !important;
+  }
+  
+  .service-card,
+  .product-card,
+  .testimonial-card,
+  .process-step {
+    margin: 1rem 0 !important;
+  }
+  
+  .btn,
+  .cta-btn,
+  .service-btn,
+  .product-btn {
+    width: 100% !important;
+    max-width: 300px !important;
+    justify-content: center !important;
+    margin: 0.5rem 0 !important;
+  }
+}
+
+/* ===== CUTE GRADIENTS ===== */
+.cute-gradient-1 {
+  background: linear-gradient(135deg, #fff5f5, #f0f9ff) !important;
+}
+
+.cute-gradient-2 {
+  background: linear-gradient(135deg, #f0f9ff, #fff5f5) !important;
+}
+
+/* ===== SMOOTH TRANSITIONS ===== */
+* {
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
