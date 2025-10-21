@@ -5,7 +5,6 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import Services from './components/Services';
 import Products from './components/Products';
-import ProductDetails from './components/ProductDetails';
 import Contact from './components/Contact';
 import './styles/App.css';
 
@@ -19,7 +18,6 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
             <Route path="/products" element={<Products />} />
-            <Route path="/product/:id" element={<ProductDetails />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
